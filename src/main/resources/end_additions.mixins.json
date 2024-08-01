@@ -1,11 +1,11 @@
 {
 	"required": true,
 	"minVersion": "0.8",
-	"package": "com.example.example_mod.mixin",
+	"package": "io.github.zokona.end_additions.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [],
 	"client": [
-		"TitleScreenMixin"
+      "io.github.zokona.end_additions.mixin.TitleScreenMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
