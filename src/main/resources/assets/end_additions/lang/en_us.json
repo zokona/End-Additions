@@ -1,4 +1,5 @@
 {
   "item.end_additions.life_crystal": "Life Crystal",
-  "itemGroup.end_additions.end_additions": "End Additions"
+  "itemGroup.end_additions.end_additions": "End Additions",
+  "itemTooltip.end_additions.life_crystal": "Heals 3 HP per kill when held in off hand."
 }
