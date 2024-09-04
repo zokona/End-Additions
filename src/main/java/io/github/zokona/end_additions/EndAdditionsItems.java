@@ -14,6 +14,7 @@ import org.quiltmc.loader.api.ModContainer;
 
 public class EndAdditionsItems {
 	public static final LifeCrystal LIFE_CRYSTAL = new LifeCrystal(new Item.Settings().maxCount(1).rarity(Rarity.EPIC));
+	public static final DragonsToothSpear DRAGONS_TOOTH_SPEAR = new DragonsToothSpear(new Item.Settings().maxCount(1).rarity(Rarity.RARE));
 
 	public static void register(ModContainer mod) {
 		final RegistryKey<ItemGroup> END_ADDITIONS_GROUP_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(mod.metadata().id(), "item_group"));
@@ -23,9 +24,11 @@ public class EndAdditionsItems {
 
 		Registry.register(Registries.ITEM_GROUP, END_ADDITIONS_GROUP_KEY, END_ADDITIONS_GROUP);
 		Registry.register(Registries.ITEM, Identifier.of(mod.metadata().id(), "life_crystal"), LIFE_CRYSTAL);
+		Registry.register(Registries.ITEM, Identifier.of(mod.metadata().id(), "dragons_tooth_spear"), DRAGONS_TOOTH_SPEAR);
 
 		ItemGroupEvents.modifyEntriesEvent(END_ADDITIONS_GROUP_KEY).register(entries -> {
 			entries.addItem(LIFE_CRYSTAL);
+			entries.addItem(DRAGONS_TOOTH_SPEAR);
 		});
 	}
 }
